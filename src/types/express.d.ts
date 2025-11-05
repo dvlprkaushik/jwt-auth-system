@@ -1,4 +1,5 @@
-import "express";
+import * as express from "express";
+
 declare global {
   namespace Express {
     interface Request {
@@ -6,11 +7,16 @@ declare global {
         userId: number;
         email: string;
       };
-      cookies: {
-        accessToken?: string;
-        refreshToken?: string;
-      };
     }
+  }
+}
+
+declare module 'express' {
+  export interface Request {
+    cookies: {
+      accessToken?: string;
+      refreshToken?: string;
+    };
   }
 }
 
