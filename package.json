@@ -1,0 +1,50 @@
+{
+  "name": "jwt-auth-system",
+  "version": "1.0.0",
+  "description": "Practice project: JWT-based auth system with Express, TypeScript, and bcrypt.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/index.js",
+    "migrate": "prisma migrate dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvlprkaushik/jwt-auth-system.git"
+  },
+  "keywords": [
+    "jwt",
+    "prisma",
+    "postgres",
+    "express",
+    "REST"
+  ],
+  "author": "Kaushik",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dvlprkaushik/jwt-auth-system/issues"
+  },
+  "homepage": "https://github.com/dvlprkaushik/jwt-auth-system#readme",
+  "dependencies": {
+    "@prisma/client": "^6.18.0",
+    "bcrypt": "^6.0.0",
+    "chalk": "^5.6.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "prisma": "^6.18.0",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.20.6"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.5",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.10.0",
+    "typescript": "^5.9.3"
+  }
+}
