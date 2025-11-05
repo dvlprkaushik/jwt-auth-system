@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import chalk from "chalk";
+import cookieParser from "cookie-parser";
 import pkg from "package.json";
 import { env } from "./env/env";
 
@@ -8,6 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
+app.use(cookieParser());
 
 // Test Routes
 app.get("/", (_req: Request, res: Response) => {
