@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 import chalk from "chalk";
 import dotenv from "dotenv";
 import pkg from "package.json";
+import { env } from "./env/env";
 
 dotenv.config({quiet : true});
 
@@ -33,7 +34,7 @@ app.use((_req: Request, res: Response) => {
 // Start server
 app.listen(PORT, () => {
   console.log(
-    chalk.green.bold(`✅ Server running at http://localhost:${PORT}`)
+    chalk.green.bold(`✅ Server running at ${env.baseUrl}`)
   );
-  console.log(chalk.blue(`Mode: ${process.env.NODE_ENV}`));
+  console.log(chalk.blue(`Mode: ${env.nodeEnv}`));
 });
