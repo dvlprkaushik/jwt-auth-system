@@ -1,10 +1,7 @@
 import express, { Request, Response } from "express";
 import chalk from "chalk";
-import dotenv from "dotenv";
 import pkg from "package.json";
 import { env } from "./env/env";
-
-dotenv.config({quiet : true});
 
 const app = express();
 const PORT = process.env.PORT || 5000;
