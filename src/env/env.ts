@@ -25,8 +25,8 @@ export const env = {
   // 🔐 JWT Config
   accessSecret: process.env.ACCESS_SECRET!,
   refreshSecret: process.env.REFRESH_SECRET!,
-  accessTokenExpiresIn: (process.env.ACCESS_TOKEN_EXPIRES_IN ?? "15m") as string | number,
-  refreshTokenExpiresIn: (process.env.REFRESH_TOKEN_EXPIRES_IN ?? "7d") as string | number,
+  accessTokenExpiresIn: (process.env.ACCESS_TOKEN_EXPIRES_IN ?? "15m") as `${number}${"s" | "m" | "h" | "d"}` | number,
+  refreshTokenExpiresIn: (process.env.REFRESH_TOKEN_EXPIRES_IN ?? "7d") as `${number}${"s" | "m" | "h" | "d"}` | number,
 
   // 🧂 Bcrypt
   bcryptSaltRounds: Number(process.env.BCRYPT_SALT_ROUNDS) || 10,
