@@ -25,6 +25,10 @@ app.get("/info", (_req: Request, res: Response) => {
   });
 });
 
+// Main Routes
+import { indexRoutes } from "./routes/index.routes";
+app.use("/api",indexRoutes);
+
 // Fallback route
 app.use((_req: Request, res: Response) => {
   res.status(404).json({ success: false, message: "Route not found" });
