@@ -2,7 +2,7 @@ import { env } from "@/env/env";
 import type { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
-interface JwtPayload {
+export interface JwtPayload {
   userId: number;
   email: string;
 }
