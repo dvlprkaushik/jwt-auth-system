@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import chalk from "chalk";
 import cookieParser from "cookie-parser";
 import pkg from "package.json";
-import { env } from "./env/env";
+import { env } from "./env/env.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -26,7 +26,7 @@ app.get("/info", (_req: Request, res: Response) => {
 });
 
 // Main Routes
-import { indexRoutes } from "./routes/index.routes";
+import { indexRoutes } from "./routes/index.routes.js";
 app.use("/api",indexRoutes);
 
 // Fallback route

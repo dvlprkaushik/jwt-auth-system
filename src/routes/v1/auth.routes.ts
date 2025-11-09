@@ -5,8 +5,8 @@ import {
   getProfile,
   logout,
   refreshAccessToken
-} from '../../controllers/auth.controller';
-import { authMiddleware } from '../../middleware/auth.middleware';
+} from '../../controllers/auth.controller.js';
+import { authMiddleware } from '../../middleware/auth.middleware.js';
 
 const authRouter = Router();
 

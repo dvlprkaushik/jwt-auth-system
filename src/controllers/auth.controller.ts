@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import { prisma } from "@/db/prisma.db";
-import { env } from "@/env/env";
-import { JwtPayload } from "@/middleware/auth.middleware";
+import { prisma } from "@/db/prisma.db.js";
+import { env } from "@/env/env.js";
+import { JwtPayload } from "@/middleware/auth.middleware.js";
 
 // Helper function - for token generating.
 const generateTokens = (userId: number, email: string) => {
