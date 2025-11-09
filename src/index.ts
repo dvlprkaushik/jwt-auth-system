@@ -1,7 +1,8 @@
 import express, { Request, Response } from "express";
 import chalk from "chalk";
 import cookieParser from "cookie-parser";
-import pkg from "../package.json";
+import fs from "fs";
+const pkg = JSON.parse(fs.readFileSync(new URL("../package.json", import.meta.url), "utf8"));
 import { env } from "./env/env.js";
 
 const app = express();
