@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import chalk from "chalk";
 import cookieParser from "cookie-parser";
-import pkg from "package.json";
+import pkg from "../package.json";
 import { env } from "./env/env.js";
 
 const app = express();
